@@ -38,15 +38,10 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  // Implement your sign-up logic here
-                },
-                child: Text('Sign Up'),
-              ),
-              TextButton(
-                onPressed: () {
+                  // Navigate back to the Sign In Screen upon successful sign up
                   Navigator.pop(context);
                 },
-                child: Text('Already have an account? Sign in'),
+                child: Text('Sign Up'),
               ),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'signup_screen.dart'; // This will be created in Step 2.
+import 'home_screen.dart';
+import 'signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -11,7 +12,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlutterLogo(size: 120), // Placeholder for the logo.
+              FlutterLogo(size: 120),
               SizedBox(height: 48),
               TextFormField(
                 decoration: InputDecoration(
@@ -30,14 +31,21 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  // Implement your login logic here
+                  // Navigate to the Home Screen upon successful login
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
                 },
                 child: Text('Sign In'),
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SignUpScreen()));
+                  // Navigate to the Sign Up Screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpScreen()),
+                  );
                 },
                 child: Text('Don\'t have an account? Sign Up'),
               ),

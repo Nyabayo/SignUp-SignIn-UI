@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
+import 'home_screen.dart';
 import 'signup_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class PLPLoginDemo extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(), // The initial route is set to LoginScreen directly.
+      home: LoginScreen(),
     );
   }
 }
